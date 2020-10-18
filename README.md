@@ -15,7 +15,7 @@
 
 ### ✨ [Demo](https://linuxdicasesuporte.blogspot.com/2020/04/ubuntu-2004-com-aparencia-de-mac-os.html)
 
-## Install
+## Install macOS Mojave Theme
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/hebertcisco/maclinus/master/maclinus.sh | sh
