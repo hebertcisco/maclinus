@@ -14,12 +14,12 @@
 ## Install macOS Mojave Theme
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/hebertcisco/maclinus/master/mojave.sh | sh
+curl -fsSL https://raw.githubusercontent.com/hebertcisco/maclinus/master/mojave | sh
 ```
 ## Install macOS BigSur Theme
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/hebertcisco/maclinus/master/bigsur.sh | sh
+curl -fsSL https://raw.githubusercontent.com/hebertcisco/maclinus/master/bigsur | sh
 ```
 
 > See the tutorial: [https://www.youtube.com/watch?v=UpuDJAb748k](https://www.youtube.com/watch?v=UpuDJAb748k)
