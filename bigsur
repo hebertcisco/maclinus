@@ -1,0 +1,59 @@
+#!/bin/bash
+## By Hebert F. Barros 2019
+## Removing any apt ## crashes
+sudo rm /var/lib/dpkg/lock-frontend
+sudo rm /var/cache/apt/archives/lock
+
+sudo apt-get update
+
+# Install some required libraries
+echo 'Installing some required libraries'
+sudo apt-get install gtk2-engines-murrine gtk2-engines-pixbuf gnome-tweaks libcanberra-gtk3-module libcanberra-gtk-module libglib2.0-dev gir1.2-gtkclutter-1.0 gnome-tweaks --y
+
+# Download the wallpapers.
+
+echo 'Downloading the wallpapers.'
+wget -O wallpaper.zip https://www.dropbox.com/s/l3imo1olrw4s1w0/wallpaper.zip
+unzip wallpaper.zip -d ~/Imagens
+rm wallpaper.zip
+
+# Download the icon theme.
+
+echo 'Downloading the icon theme.'
+wget -O Mkos-Big-Sur.zip https://www.dropbox.com/s/u4zkcrqjtu6v2oe/Mkos-Big-Sur.zip
+unzip Mkos-Big-Sur.zip -d ~/.icons
+rm Mkos-Big-Sur.zip
+
+echo 'Downloading the cursor theme.'
+wget -O Cursor-macOSBigSur.zip https://www.dropbox.com/s/01qjnsofhit0yyz/Cursor-macOSBigSur.zip
+unzip Cursor-macOSBigSur.zip -d ~/.icons
+rm Cursor-macOSBigSur.zip
+
+# Download the windows and Gnome Shell theme.
+
+echo 'Downloading the dark big sur theme.'
+wget -O mkos-BigSur-Dark-gtk.zip https://www.dropbox.com/s/a8aig4wah05lfgi/mkos-BigSur-Dark-gtk.zip
+unzip mkos-BigSur-Dark-gtk.zip -d ~/.themes
+rm mkos-BigSur-Dark-gtk.zip
+
+echo 'Downloading the gtk big sur theme.'
+wget -O mkos-bigSur-gtk.zip https://www.dropbox.com/s/sv1l9csep6d1c9g/mkos-bigSur-gtk.zip
+unzip mkos-bigSur-gtk.zip -d ~/.themes
+rm mkos-bigSur-gtk.zip
+
+## Finishing
+
+echo 'Downloading'
+
+# Move left dock panel to bottom
+echo 'Moving left dock panel to bottom'
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+# Shorten the dock panel
+echo 'Shortening the dock panel'
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+# Move app launcher icon to left
+echo 'Moving app launcher icon to left'
+gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+# Set dock panel background transparency (range from 0 to 1)
+echo 'Seting dock panel background transparency (range from 0 to 1)'
+gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.3
