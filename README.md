@@ -11,15 +11,18 @@
 
 > Install the MacOS theme on your linux
 
-### 🏠 [Homepage](http://ubuntuhandbook.org/index.php/2020/08/mac-os-catalina-theme-ubuntu-20-04/)
-
-### ✨ [Demo](https://linuxdicasesuporte.blogspot.com/2020/04/ubuntu-2004-com-aparencia-de-mac-os.html)
-
 ## Install macOS Mojave Theme
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/hebertcisco/maclinus/master/maclinus.sh | sh
+curl -fsSL https://raw.githubusercontent.com/hebertcisco/maclinus/master/mojave.sh | sh
 ```
+## Install macOS BigSur Theme
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/hebertcisco/maclinus/master/bigsur.sh | sh
+```
+
+> See the tutorial: [https://www.youtube.com/watch?v=UpuDJAb748k](https://www.youtube.com/watch?v=UpuDJAb748k)
 
 ## Author
 
